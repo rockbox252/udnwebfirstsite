@@ -1,0 +1,131 @@
+{% extends 'udn/base.html' %}
+{% block content %}
+
+<style>
+
+.main {
+  padding: 1.0% 0%;
+  margin-top: 0px;
+  height: 900px;
+}
+
+
+
+
+
+
+.bkgrd
+{padding: 6%;
+  background-color: white;
+  margin:0;
+}
+button.accordion {
+    
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: blue;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+  background-color: white;
+    
+}
+
+div.panel {
+    padding: 0 30px;
+    display: none;
+   
+    font-size: 25px;
+    color: rgb(100,10,100);
+}
+
+h2{
+    padding: 0% 25%;
+    font-size: 50px;
+}
+</style>
+
+
+
+
+
+<div class="main">
+  <div class="bkgrd">
+
+<h2>Frequently Asked Question</h2>
+
+
+
+
+
+<ul>
+  <li> <button class="accordion">What is the minimum cost of advertisement in Udnkhatola?</button>
+<div class="panel">
+  <p>The minimum cost of subscription with which anyone can join us is INR 1000.</p>
+</div>             </li>
+  <li>  <button class="accordion">Is there any extra charge for making videos?</button>
+<div class="panel">
+  <p>Yes, we do charge if you need higher quality videos.</p>
+</div>  
+   </li>
+<li>  <button class="accordion">How product will be advertised?</button>
+<div class="panel">
+  <p>We are using smart tab installed autorickshaw</p>
+</div>  </li><li>  <button class="accordion">What will be reach of a particular advertisement?</button>
+<div class="panel">
+  <p>It will depend on subscribed package</p>
+</div>  </li><li>  <button class="accordion">Number of times one can choose trial packages.</button>
+<div class="panel">
+  <p>Once </p>
+</div>  </li><li>  <button class="accordion">What is the time limit of long term and short term packages?</button>
+<div class="panel">
+  <p>Long term packages can be extended upto two months.Time limit of Short term package will depend on numbers of views.</p>
+</div>  </li><li>  <button class="accordion">Can we extend trial period</button>
+<div class="panel">
+  <p>No, but you can opt for regular packages.</p>
+</div>  </li><li>  <button class="accordion">Is there any extra charges for marketing solution?</button>
+<div class="panel">
+  <p>Yes,we do charge according to your marketing needs.</p>
+</div>   </li>
+</ul>  
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+</div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+{% endblock %}

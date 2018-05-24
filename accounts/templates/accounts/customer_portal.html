@@ -1,0 +1,26 @@
+{% extends 'udn/base.html' %}
+
+{% block content %}
+<style>
+  .main {
+  padding: 4.5% 0%;
+  margin-top: 0px;
+  height: 420px;
+}
+</style>
+<p>  .       </p>
+{% for i in informations %}
+{% if i != 2 %}
+{% csrf_token %}
+<p>Advertiser Name</p>
+<p>{{ i.advertiser_name }}</p>
+{% else %}
+<p>Number of views</p>
+<p>{{ i.video_count }}</p>
+<br>
+{% endif %}
+
+{% endfor %}
+
+
+{% endblock %}
